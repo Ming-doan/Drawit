@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawit</title>
+    <link rel="stylesheet" href="./assets/css/stye.css">
+    <link rel="stylesheet" href="./assets/fontawesome-free-5.15.4-web/css/all.css">
+</head>
+<body>
+    <h1>Drawit</h1>
+    <canvas id="canvas"></canvas>
+    <div class="panel">
+        <div class="pen-picker">
+            <input type="radio" name="pen" id="pencil" checked>
+            <input type="radio" name="pen" id="eraser">
+
+            <label class="pen-opt pen-active" for="pencil" id="pen-pen">
+                <i class="fas fa-pencil-alt"></i>
+            </label>
+            <label class="pen-opt" for="eraser" id="pen-eraser">
+                <i class="fas fa-eraser"></i>
+            </label>
+        </div>
+        <div class="color-picker">
+            <input type="radio" name="color" id="black" checked>
+            <input type="radio" name="color" id="red">
+            <input type="radio" name="color" id="blue">
+            <input type="radio" name="color" id="yellow">
+
+            <label class="color-opt color-active" for="black" id="color-1"></label>
+            <label class="color-opt" for="red" id="color-2"></label>
+            <label class="color-opt" for="blue" id="color-3"></label>
+            <label class="color-opt" for="yellow" id="color-4"></label>
+        </div>
+        <div class="clear">
+            <i class="fas fa-trash"></i>
+        </div>
+    </div>
+    <div class="range-slider">
+        <input type="range" name="slider" id="slider" min="1" max="50" value="10">
+    </div>
+    <script src="./assets/js/control.js"></script>
+    <script src="./assets/js/canvas.js"></script>
+</body>
+</html>

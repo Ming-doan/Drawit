@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    inset: 0 auto auto 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    color: gainsboro;
+    user-select: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    inset: 50% 20px auto auto;
+    transform: translateY(-50%);
+}
+
+.pen-picker {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.pen-opt {
+    color: grey;
+    padding: 10px;
+    background-color: transparent;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.pen-opt.pen-active {
+    color: black;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.color-picker {
+    border-top: 1px solid black;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.color-opt {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.color-opt.color-active {
+    border: 5px solid rgba(255, 255, 255, .5);
+}
+
+#color-1 {
+    background-color: black;
+}
+
+#color-2 {
+    background-color: #FF5959;
+}
+
+#color-3 {
+    background-color: #548CFF;
+}
+
+#color-4 {
+    background-color: #FFC900;
+}
+
+.clear {
+    padding: 10px;
+    border-radius: 5px;
+    color: red;
+    margin-top: 10px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.clear:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.range-slider {
+    position: absolute;
+    inset: 50% auto auto 25px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+#slider {
+    -webkit-appearance: none;
+    background-color: #fff;
+    border-radius: 10px;
+    outline: none;
+    width: 200px;
+    height: 20px;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: 0 10px;
+    transition: .3s;
+    cursor: grab;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+#canvas {
+    background-color: #f5f5f5;
+}
